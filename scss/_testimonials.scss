@@ -1,0 +1,70 @@
+.testimonials {
+  background: $secondary-color;
+  padding: 60px 40px 30px;
+  text-align: center;
+  color: #fff;
+  @include montserrat-medium;
+
+  @include mediaSm {
+    padding: 80px 45px 35px;
+  }
+
+  @include mediaMd {
+    padding: 100px 50px 40px;
+  }
+
+  blockquote {
+    font-size: 24px;
+    line-height: 1.5;
+
+    &::before {
+      content: '\201c';
+    }
+
+    &::after {
+      content: '\201d';
+    }
+  }
+
+  .author {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+
+  &__dots {
+    padding: 70px 20px 20px;
+    text-align: center;
+  }
+
+  &__dot {
+    display: inline-block;
+    background-color: #fff;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    margin: 4px;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: 0.5s ease;
+
+    &.active,
+    &:hover {
+      background-color: #fff;
+      transform: scale(1.5);
+      opacity: 1;
+    }
+  }
+}
+
+.fade {
+  animation: fade 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}

@@ -1,0 +1,30 @@
+// smartphones
+@include mediaSm {
+}
+
+// tablets & small laptops
+@include mediaMd {
+}
+
+// desktop & laptops
+@include mediaLg {
+  .nav-btn {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+  }
+
+  .heading--main {
+    margin-top: 140px;
+    font-size: 38px;
+  }
+}
+
+// widescreens
+@include mediaXL {
+  .nav-list__item {
+    margin-left: 40px;
+  }
+}

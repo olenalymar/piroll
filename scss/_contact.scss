@@ -1,0 +1,83 @@
+.contact {
+  background: $primary-color;
+  text-align: center;
+
+  p {
+    @include mediaSm {
+      width: 70%;
+      margin: auto;
+    }
+
+    @include mediaLg {
+      width: 50%;
+    }
+  }
+
+  &-form {
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+
+    @include mediaSm {
+      padding: 40px;
+    }
+
+    @include mediaMd {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__input {
+      display: block;
+      width: 100%;
+      margin: 15px 0;
+      padding: 15px 20px;
+      border: 1px solid transparent;
+      outline: none;
+
+      &:focus {
+        border: 1px solid $secondary-color;
+      }
+
+      &::placeholder {
+        font-size: 15px;
+        color: #787878;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+
+      &[name='email'],
+      &[name='name'] {
+        @include mediaMd {
+          width: 48%;
+        }
+      }
+    }
+
+    &__textarea {
+      display: block;
+      width: 100%;
+      margin: 15px 0;
+      padding: 15px 20px;
+      border: 1px solid transparent;
+      outline: none;
+
+      &:focus {
+        border: 1px solid $secondary-color;
+      }
+
+      &::placeholder {
+        font-size: 15px;
+        color: #787878;
+        font-family: 'Nunito Sans', sans-serif;
+      }
+    }
+  }
+}
+
+.button--form {
+  margin: 20px auto;
+}

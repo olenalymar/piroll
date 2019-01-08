@@ -1,0 +1,125 @@
+.section--skills {
+  background: $primary-color url('../images/skills-bg.jpg') 100% 0% no-repeat /
+    cover;
+
+  padding: 40px 0;
+
+  @media screen and (max-width: 769px) {
+    background: $primary-color;
+  }
+  @include mediaMd {
+    padding: 100px 0;
+  }
+}
+
+.numbers {
+  background: $secondary-color;
+  color: #fff;
+  padding: 20px 0;
+
+  @include mediaSm {
+    padding: 45px 0;
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
+    @include ul-reset;
+
+    @include mediaSm {
+      flex-direction: row;
+    }
+
+    &__item {
+      position: relative;
+      margin: 15px 0 15px 15px;
+
+      @include mediaSm {
+        width: 50%;
+        margin: 15px 0;
+      }
+
+      @include mediaMd {
+        width: 25%;
+        margin: 15px 0;
+      }
+
+      &--completed {
+      }
+
+      &--completed::before {
+        position: absolute;
+        display: block;
+        content: url('../images/portfolio.svg');
+        width: 40px;
+      }
+
+      &--hours::before {
+        position: absolute;
+        display: block;
+        content: url('../images/clock.svg');
+      }
+
+      &--feedbacks::before {
+        position: absolute;
+        display: block;
+        content: url('../images/star.svg');
+      }
+
+      &--clients::before {
+        position: absolute;
+        display: block;
+        content: url('../images/like.svg');
+      }
+    }
+
+    &__number {
+      @include montserrat-medium;
+      font-size: 18px;
+      display: block;
+      margin-bottom: 7px;
+      padding-left: 65px;
+    }
+
+    &__description {
+      @include montserrat-medium;
+      font-size: 12px;
+      text-transform: uppercase;
+      display: block;
+      padding-left: 65px;
+    }
+  }
+}
+
+.skills-list {
+  @include ul-reset;
+
+  &__item {
+  }
+
+  &__title {
+    display: block;
+    text-transform: uppercase;
+    @include montserrat-medium;
+    font-size: 12px;
+  }
+
+  &__progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    max-width: 400px;
+    height: 3px;
+    margin: 10px 0 30px;
+
+    &::-webkit-progress-bar {
+      background-color: #d8d8d8;
+    }
+
+    &::-webkit-progress-value {
+      background-color: $secondary-color;
+    }
+  }
+}

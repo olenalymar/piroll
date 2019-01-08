@@ -1,0 +1,31 @@
+// vars
+$primary-color: #f5f5f5;
+$secondary-color: #10c9c3;
+
+// mixins
+@mixin easeInOut {
+  transition: all 0.5s ease-in-out;
+}
+
+// media query mixins
+@mixin mediaSm {
+  @media screen and (min-width: 500px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+@mixin mediaLg {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+@mixin mediaXL {
+  @media screen and (min-width: 1171px) {
+    @content;
+  }
+}

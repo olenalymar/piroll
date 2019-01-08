@@ -1,0 +1,62 @@
+.process {
+  text-align: center;
+
+  p {
+    width: 90%;
+    margin: auto;
+
+    @include mediaSm {
+      width: 70%;
+    }
+
+    @include mediaXL {
+      width: 50%;
+    }
+  }
+}
+
+.video {
+  position: relative;
+  width: 95%;
+  margin: 30px auto;
+
+  @include mediaMd {
+    margin: 50px auto;
+  }
+
+  img {
+    width: 100%;
+    max-width: 1200px;
+  }
+
+  .play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: $secondary-color;
+    cursor: pointer;
+    transition: background 0.4s;
+
+    @include mediaMd {
+      width: 100px;
+      height: 100px;
+    }
+
+    &:hover {
+      background: #999;
+    }
+  }
+
+  .arrow {
+    border: 12px solid transparent;
+    border-left: 12px solid #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-15%, -50%);
+  }
+}

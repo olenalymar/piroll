@@ -1,0 +1,33 @@
+@import 'normalize';
+@import 'config';
+@import 'typography';
+@import 'header';
+@import 'about';
+@import 'skills';
+@import 'process';
+@import 'services';
+@import 'works';
+@import 'testimonials';
+@import 'clients';
+@import 'contact';
+@import 'footer';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 25px;
+}
+
+@import 'media';

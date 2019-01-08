@@ -1,0 +1,18 @@
+.section--about {
+  padding: 60px 0 90px;
+  max-width: 90%;
+  margin: auto;
+  text-align: center;
+
+  @include mediaMd {
+    max-width: 70%;
+  }
+
+  @include mediaXL {
+    max-width: 50%;
+  }
+}
+
+img[alt='signature'] {
+  margin-top: 20px;
+}
